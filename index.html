@@ -1,400 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Biswajit Sao</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Biswajit</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biswajit Sao | MERN Stack Developer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="bs-desktop-nav" class="bs-nav">
+        <div class="bs-nav-container">
+            <div class="bs-logo">
+                <i class="fas fa-code"></i>
+                <span>Biswajit</span>
+            </div>
+            <div class="bs-nav-menu">
+                <ul class="bs-nav-links">
+                    <li><a href="#bs-home">Home</a></li>
+                    <li><a href="#bs-about">About</a></li>
+                    <li><a href="#bs-skills">Skills</a></li>
+                    <li><a href="#bs-projects">Projects</a></li>
+                    <li><a href="#bs-contact">Contact</a></li>
+                    <li>
+                        <button class="bs-btn bs-btn-color-1" onclick="window.open('./assets/Biswajit-Sao.pdf')">
+                            <i class="fas fa-download"></i> Resume
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">BISWAJIT SAO</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    <nav id="bs-hamburger-nav" class="bs-nav">
+        <div class="bs-nav-container">
+            <div class="bs-logo">
+                <i class="fas fa-code"></i>
+                <span>Biswajit</span>
+            </div>
+            <div class="bs-hamburger-menu">
+                <div class="bs-hamburger-icon" onclick="bsToggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="bs-menu-links">
+                    <div class="bs-menu-header">
+                        <div class="bs-logo">
+                            <i class="fas fa-code"></i>
+                            <span>Biswajit</span>
+                        </div>
+                        <button class="bs-close-btn" onclick="bsToggleMenu()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <ul>
+                        <li><a href="#bs-home" onclick="bsToggleMenu()">Home</a></li>
+                        <li><a href="#bs-about" onclick="bsToggleMenu()">About</a></li>
+                        <li><a href="#bs-skills" onclick="bsToggleMenu()">Skills</a></li>
+                        <li><a href="#bs-projects" onclick="bsToggleMenu()">Projects</a></li>
+                        <li><a href="#bs-contact" onclick="bsToggleMenu()">Contact</a></li>
+                        <li>
+                            <button class="bs-btn bs-btn-color-1" onclick="window.open('./assets/Biswajit-Sao.pdf'); bsToggleMenu()">
+                                <i class="fas fa-download"></i> Resume
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="bs-menu-socials">
+                        <a href="https://www.linkedin.com/in/biswajit-sao-6581a9359/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Biswajit-Sao" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
     </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Biswajit Sao</h1>
-        <p class="section__text__p2">MERN Stack Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Biswajit Sao.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/biswajit-sao-6581a9359/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Biswajit-Sao'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>MERN Stack Developer</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Bachelor of Technology (B.Tech) in Computer Science and Engineering<br /></p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              👋 Hi, I'm Biswajit Sao, a passionate Full-Stack Developer specializing in the MERN (MongoDB, Express, React, Node.js) stack. Currently, I'm pursuing Computer Science & Engineering at Bankura Unnayani Institute of Engineering, where I explore the exciting world of web development and software engineering.I love building scalable, high-performance web applications that provide seamless user experiences. Whether it's crafting intuitive front-end designs or developing robust back-end architectures, I enjoy turning ideas into reality with clean, efficient code.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href=''"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Front-End Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Figma</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MongoDb</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Github</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href=''"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Doctor Appointment Booking System</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Biswajit-Sao/Doctor-Appointment-Booking-System'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://astonishing-treacle-d0653d.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Job Portal</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Biswajit-Sao/job-portal'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://job-portal-nlty.onrender.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">E Commerce</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Biswajit-Sao/e-commerce'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://e-commerce-bs.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href=''"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:saobiswajit4@gmail.com">saobiswajit4@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/biswajit-sao-6581a9359/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="" onclick="window.open('./assets/Biswajit-Sao.pdf')">Resume</a></li>
 
-          </ul>
+    <!-- Hero Section -->
+    <section id="bs-home">
+        <div id="bs-particles"></div>
+        <div class="container">
+            <div class="bs-hero-content">
+                <div class="bs-hero-text">
+                    <p class="bs-section-text">Hello, I'm</p>
+                    <h1 class="bs-hero-title">Biswajit Sao</h1>
+                    <div class="bs-typewriter">
+                        <span class="bs-typing-text">MERN Stack Developer</span>
+                    </div>
+                    <p class="bs-hero-description">
+                        I build exceptional digital experiences with modern web technologies. 
+                        Passionate about creating efficient, scalable, and user-friendly applications.
+                    </p>
+                    <div class="bs-btn-container">
+                        <button class="bs-btn bs-btn-color-2" onclick="window.open('./assets/Biswajit Sao.pdf')">
+                            <i class="fas fa-download"></i> Download CV
+                        </button>
+                        <button class="bs-btn bs-btn-color-1" onclick="location.href='./#bs-contact'">
+                            <i class="fas fa-envelope"></i> Contact Me
+                        </button>
+                    </div>
+                    <div id="bs-socials-container" class="bs-socials-container">
+                        <a href="https://www.linkedin.com/in/biswajit-sao-6581a9359/" class="bs-icon" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Biswajit-Sao" class="bs-icon" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/" class="bs-icon" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="bs-icon" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bs-hero-image bs-floating">
+                    <img src="./assets/profile-pic.png" alt="Biswajit Sao profile picture">
+                    <div class="bs-tech-icons">
+                        <div class="bs-icon-circle react">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="bs-icon-circle node">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="bs-icon-circle js">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="bs-icon-circle mongo">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </nav>
-      <p>Copyright &#169; Biswajit Sao</p>
+    </section>
+
+   <!-- About Section -->
+<section id="bs-about">
+    <div class="container">
+        <p class="bs-section-text">Get To Know More</p>
+        <h1 class="bs-title">About Me</h1>
+        <div class="bs-section-container">
+            <div class="bs-section-pic-container">
+                <img src="./assets/about-pic.png" alt="Profile picture" class="bs-about-pic bs-floating">
+                <div class="bs-glow-effect"></div>
+            </div>
+            <div class="bs-about-details-container">
+                <div class="bs-about-containers">
+                    <div class="bs-details-container">
+                        <div class="bs-icon-container">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Experience</h3>
+                        <p>MERN Stack Developer</p>
+                    </div>
+                    <div class="bs-details-container">
+                        <div class="bs-icon-container">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education</h3>
+                        <p>B.Tech in CSE</p>
+                        <p class="bs-highlight-text">Bankura Unnayani Institute of Engineering</p>
+                    </div>
+                </div>
+                <div class="bs-text-container">
+                    <p>
+                        👋 Hi, I'm Biswajit Sao, a passionate Full-Stack Developer specializing in the MERN stack. 
+                        I love building scalable, high-performance web applications that provide seamless user experiences. 
+                    </p>
+                    <p>
+                        With a strong foundation in JavaScript and its ecosystem, I specialize in building responsive 
+                        and interactive user interfaces with React.js, while also developing efficient server-side 
+                        applications with Node.js and Express.
+                    </p>
+                    <div class="bs-skills-container">
+                        <div class="bs-skill-item">
+                            <i class="fab fa-html5"></i> HTML5
+                        </div>
+                        <div class="bs-skill-item">
+                            <i class="fab fa-css3-alt"></i> CSS3
+                        </div>
+                        <div class="bs-skill-item">
+                            <i class="fab fa-js"></i> JavaScript
+                        </div>
+                        <div class="bs-skill-item">
+                            <i class="fab fa-react"></i> React
+                        </div>
+                        <div class="bs-skill-item">
+                            <i class="fab fa-node-js"></i> Node.js
+                        </div>
+                        <div class="bs-skill-item">
+                            <i class="fas fa-database"></i> MongoDB
+                        </div>
+                        <div class="bs-skill-item">
+                            <i class="fab fa-git-alt"></i> Git
+                        </div>
+                        <div class="bs-skill-item">
+                            <i class="fas fa-server"></i> REST APIs
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Skills Section -->
+    <section id="bs-skills">
+        <div class="container">
+            <p class="bs-section-text">Explore My</p>
+            <h1 class="bs-title">Skills</h1>
+            
+            <div class="bs-skills-tabs">
+                <button class="bs-tab-btn active" data-tab="bs-frontend">Frontend</button>
+                <button class="bs-tab-btn" data-tab="bs-backend">Backend</button>
+                <button class="bs-tab-btn" data-tab="bs-tools">Tools</button>
+            </div>
+            
+            <div class="bs-tab-content active" id="bs-frontend">
+                <div class="bs-skills-grid">
+                    <div class="bs-skill-card">
+                        <i class="devicon-html5-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">HTML5</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 95%"></div>
+                        </div>
+                        <p class="bs-skill-level">Advanced</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-css3-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">CSS3</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 90%"></div>
+                        </div>
+                        <p class="bs-skill-level">Advanced</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-javascript-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">JavaScript</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 85%"></div>
+                        </div>
+                        <p class="bs-skill-level">Advanced</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-react-original bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">React</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 80%"></div>
+                        </div>
+                        <p class="bs-skill-level">Intermediate</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-typescript-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">TypeScript</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 65%"></div>
+                        </div>
+                        <p class="bs-skill-level">Intermediate</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-redux-original bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">Redux</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 75%"></div>
+                        </div>
+                        <p class="bs-skill-level">Intermediate</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bs-tab-content" id="bs-backend">
+                <div class="bs-skills-grid">
+                    <div class="bs-skill-card">
+                        <i class="devicon-nodejs-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">Node.js</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 80%"></div>
+                        </div>
+                        <p class="bs-skill-level">Intermediate</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-express-original bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">Express</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 75%"></div>
+                        </div>
+                        <p class="bs-skill-level">Intermediate</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-mongodb-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">MongoDB</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 70%"></div>
+                        </div>
+                        <p class="bs-skill-level">Intermediate</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-mysql-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">MySQL</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 60%"></div>
+                        </div>
+                        <p class="bs-skill-level">Basic</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-firebase-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">Firebase</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 50%"></div>
+                        </div>
+                        <p class="bs-skill-level">Basic</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-graphql-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">GraphQL</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 40%"></div>
+                        </div>
+                        <p class="bs-skill-level">Basic</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bs-tab-content" id="bs-tools">
+                <div class="bs-skills-grid">
+                    <div class="bs-skill-card">
+                        <i class="devicon-git-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">Git</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 80%"></div>
+                        </div>
+                        <p class="bs-skill-level">Intermediate</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-github-original bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">GitHub</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 75%"></div>
+                        </div>
+                        <p class="bs-skill-level">Intermediate</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-docker-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">Docker</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 40%"></div>
+                        </div>
+                        <p class="bs-skill-level">Basic</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-figma-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">Figma</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 70%"></div>
+                        </div>
+                        <p class="bs-skill-level">Intermediate</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-postman-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">Postman</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 75%"></div>
+                        </div>
+                        <p class="bs-skill-level">Intermediate</p>
+                    </div>
+                    <div class="bs-skill-card">
+                        <i class="devicon-vscode-plain bs-skill-icon"></i>
+                        <h3 class="bs-skill-name">VS Code</h3>
+                        <div class="bs-skill-bar">
+                            <div class="bs-skill-progress" style="width: 90%"></div>
+                        </div>
+                        <p class="bs-skill-level">Advanced</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="bs-projects">
+        <div class="bs-projects-bg"></div>
+        <div class="container">
+            <p class="bs-section-text">Browse My Recent</p>
+            <h1 class="bs-title">Projects</h1>
+            
+            <div class="bs-projects-filter">
+                <button class="bs-filter-btn active" data-filter="all">All</button>
+                <button class="bs-filter-btn" data-filter="mern">MERN</button>
+                <button class="bs-filter-btn" data-filter="react">React</button>
+                <button class="bs-filter-btn" data-filter="node">Node.js</button>
+            </div>
+            
+            <div class="bs-projects-container">
+                <div class="bs-project-card" data-category="mern">
+                    <div class="bs-project-img-container">
+                        <img src="./assets/project-1.jpg" alt="Doctor Appointment Booking System" class="bs-project-img">
+                        <div class="bs-project-overlay">
+                            <div class="bs-project-tags">
+                                <span class="bs-project-tag">React</span>
+                                <span class="bs-project-tag">Node.js</span>
+                                <span class="bs-project-tag">Express</span>
+                                <span class="bs-project-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bs-project-info">
+                        <h2 class="bs-project-title">Doctor Appointment Booking System</h2>
+                        <p class="bs-project-description">
+                            A comprehensive platform for patients to book appointments with doctors, 
+                            with features like doctor profiles, appointment scheduling, and notifications.
+                        </p>
+                        <div class="bs-project-btns">
+                            <button class="bs-btn bs-btn-color-1" 
+                                    onclick="location.href='https://github.com/Biswajit-Sao/Doctor-Appointment-Booking-System'">
+                                <i class="fab fa-github"></i> GitHub
+                            </button>
+                            <button class="bs-btn bs-btn-color-2" 
+                                    onclick="location.href='https://astonishing-treacle-d0653d.netlify.app/'">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bs-project-card" data-category="mern">
+                    <div class="bs-project-img-container">
+                        <img src="./assets/project-2.jpg" alt="Job Portal" class="bs-project-img">
+                        <div class="bs-project-overlay">
+                            <div class="bs-project-tags">
+                                <span class="bs-project-tag">React</span>
+                                <span class="bs-project-tag">Node.js</span>
+                                <span class="bs-project-tag">Express</span>
+                                <span class="bs-project-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bs-project-info">
+                        <h2 class="bs-project-title">Job Portal</h2>
+                        <p class="bs-project-description">
+                            A full-featured job portal where employers can post jobs and job seekers can 
+                            search and apply for positions, with user authentication and resume upload.
+                        </p>
+                        <div class="bs-project-btns">
+                            <button class="bs-btn bs-btn-color-1" 
+                                    onclick="location.href='https://github.com/Biswajit-Sao/job-portal'">
+                                <i class="fab fa-github"></i> GitHub
+                            </button>
+                            <button class="bs-btn bs-btn-color-2" 
+                                    onclick="location.href='https://job-portal-nlty.onrender.com/'">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bs-project-card" data-category="mern">
+                    <div class="bs-project-img-container">
+                        <img src="./assets/project-3.jpg" alt="E-Commerce" class="bs-project-img">
+                        <div class="bs-project-overlay">
+                            <div class="bs-project-tags">
+                                <span class="bs-project-tag">React</span>
+                                <span class="bs-project-tag">Node.js</span>
+                                <span class="bs-project-tag">Express</span>
+                                <span class="bs-project-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bs-project-info">
+                        <h2 class="bs-project-title">E-Commerce Platform</h2>
+                        <p class="bs-project-description">
+                            A complete e-commerce solution with product listings, shopping cart, 
+                            user authentication, and payment integration using Razorpay API.
+                        </p>
+                        <div class="bs-project-btns">
+                            <button class="bs-btn bs-btn-color-1" 
+                                    onclick="location.href='https://github.com/Biswajit-Sao/e-commerce'">
+                                <i class="fab fa-github"></i> GitHub
+                            </button>
+                            <button class="bs-btn bs-btn-color-2" 
+                                    onclick="location.href='https://e-commerce-bs.netlify.app/'">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                
+            
+            <div class="bs-view-more">
+                <button class="bs-btn bs-btn-color-1" onclick="location.href='https://github.com/Biswajit-Sao'">
+                    <i class="fab fa-github"></i> View More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="bs-contact">
+        <div class="container">
+            <p class="bs-section-text">Get in Touch</p>
+            <h1 class="bs-title">Contact Me</h1>
+            <div class="bs-contact-container">
+                <div class="bs-contact-info">
+                    <div class="bs-contact-info-upper-container">
+                        <div class="bs-contact-info-container">
+                            <div class="bs-contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p><a href="mailto:saobiswajit4@gmail.com">saobiswajit4@gmail.com</a></p>
+                                <p class="bs-contact-label">Email Me</p>
+                            </div>
+                        </div>
+                        <div class="bs-contact-info-container">
+                            <div class="bs-contact-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <p><a href="https://www.linkedin.com/in/biswajit-sao-6581a9359/" target="_blank">LinkedIn</a></p>
+                                <p class="bs-contact-label">Connect with me</p>
+                            </div>
+                        </div>
+                        <div class="bs-contact-info-container">
+                            <div class="bs-contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div>
+                                <p><a href="https://github.com/Biswajit-Sao" target="_blank">GitHub</a></p>
+                                <p class="bs-contact-label">Check my projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bs-contact-form">
+                    <form id="bs-contactForm">
+                        <div class="bs-form-group">
+                            <label for="bs-name">Name</label>
+                            <input type="text" id="bs-name" class="bs-form-control" required>
+                        </div>
+                        <div class="bs-form-group">
+                            <label for="bs-email">Email</label>
+                            <input type="email" id="bs-email" class="bs-form-control" required>
+                        </div>
+                        <div class="bs-form-group">
+                            <label for="bs-subject">Subject</label>
+                            <input type="text" id="bs-subject" class="bs-form-control" required>
+                        </div>
+                        <div class="bs-form-group">
+                            <label for="bs-message">Message</label>
+                            <textarea id="bs-message" class="bs-form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="bs-submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bs-footer">
+        <div class="container">
+            <div class="bs-footer-content">
+                <div class="bs-footer-logo">
+                    <i class="fas fa-code"></i>
+                    Biswajit Sao
+                </div>
+                <div class="bs-footer-socials">
+                    <a href="https://www.linkedin.com/in/biswajit-sao-6581a9359/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Biswajit-Sao" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <p class="bs-copyright">
+                    Copyright &copy; <span id="bs-year"></span> Biswajit Sao. All Rights Reserved.
+                </p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <div class="bs-back-to-top" id="bs-backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
